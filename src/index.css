@@ -1,0 +1,349 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&family=Roboto&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+html, body {
+    background: linear-gradient(70deg, #87aaee, #a088f8);
+    color: #656184;
+    font: normal 16px 'Roboto', 'Noto Sans KR', sans-serif;
+}
+
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.hide {
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    position: absolute;
+    top: -99999em;
+    text-indent: -9999em;
+}
+
+#wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#wrap > h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.cntWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.cntWrap > div:first-child {
+    width: 40%;
+    height: 100%;
+}
+
+.cntWrap > div:last-child {
+    width: 56%;
+}
+
+.searchArea {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.searchArea input[type="search"]{
+    width: 80%;
+    line-height: 25px;
+    border: 0 none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #eaeafd;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1)
+}
+
+.searchArea input[type="search"]::placeholder {
+    font-size: 12px;
+}
+
+.sortBox {
+    width: 18%;
+    max-width: 150px;
+    background-color: #eaeafd;
+    border-radius: 20px;
+    position: relative;
+}
+
+.sortBox > h3 {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+
+.sortBox > ul {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 0;
+    width: 100%;
+    background-color: #eaeafd;
+    padding: 12px 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.sortBox > ul > li {
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+form legend, .cntWrap h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form ul input, form ul textarea {
+    background-color: transparent;
+    border: 0 none;
+    font-size: 16px;
+}
+
+form ul input::placeholder, form ul textarea::placeholder {
+    font-size: 12px;
+} 
+
+form ul li {
+    margin-bottom: 15px;
+}
+
+form ul li label {
+    display: block;
+    margin-bottom: 5px;
+    text-indent: 15px;
+    font-size: 14px;
+}
+
+form ul li input, form ul li textarea {
+    width: 100%;
+    background-color: #aab5f5;
+    line-height: 1.5;
+    padding: 7px 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+
+form ul li textarea {
+    height: 150px;
+    font: inherit;
+}
+
+form button[type="button"]{
+    border: 0 none;
+    width: 100%;
+    background-color: #475c91;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px 0;
+    margin-top: 50px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+
+form .warning {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #bb2323;
+}
+
+.clientWrap li {
+    background-color: #eaeafd;
+    box-sizing: border-box;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.clientWrap li dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    align-items: flex-start;
+}
+
+.clientWrap li dl:not(:last-child) {
+    border-bottom: 1px solid #aab5f5;
+}
+
+.clientWrap li dt {
+    width: 80px;
+}
+
+.clientWrap li dd {
+    width: calc(100% - 80px);
+}
+
+.clientWrap li button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #263c72;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.clientWrap li:hover button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.clientWrap li button:hover {
+    animation: buttonBounce .45s;
+}
+
+#modalWrap {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+#modalWrap > .cnt {
+    width: 60%;
+    max-height: 60%;
+    background-color: #fff;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    border-radius: 15px;
+}
+
+#modalWrap > .cnt > h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+#modalWrap > .cnt > div {
+    padding: 30px 8%;
+}
+
+#modalWrap dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    align-items: flex-start;
+}
+
+#modalWrap dl:not(:last-child){
+    border-bottom: 1px solid #aab5f5;
+}
+
+#modalWrap dl dt {
+    width: 100px;
+}
+
+#modalWrap dl dd {
+    width: calc(100% - 100px);
+}
+
+#modalWrap .btnClose {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+#modalWrap .btnClose button {
+    background-color: #475c91;
+    font-size: 30px;
+    color: #fff;
+    width: 40%;
+    font: inherit;
+    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1)
+}
+
+@media (max-width: 560px){
+    .searchArea input[type="search"] {
+        width: 70%;
+    }
+    .sortBox {
+        width: 28%;
+    }
+}
+
+@media (max-width: 400px){
+    #modalWrap > .cnt {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 768px){
+    .cntWrap {
+        display: block;
+    }
+    .cntWrap > div:first-child, .cntWrap > div:last-child {
+        width: 100%;
+    }
+    .cntWrap > div:last-child{
+        margin-top: 100px;
+    }
+    form legend, .cntWrap h3 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #modalWrap > .cnt {
+        width: 600px;
+        max-height: 600px;
+    }
+}
+
+@keyframes buttonBounce{
+    0%{transform:scale(1);}
+    25%{transform:scaleX(1.2) scaleY(0.8);}
+    50%{transform:scaleX(0.8) scaleY(1.2);}
+    75%{transform:scaleX(1.1) scaleY(1.1);}
+}
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
