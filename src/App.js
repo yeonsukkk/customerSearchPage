@@ -67,6 +67,7 @@ const App = () => {
     return(
         <div id="wrap">
             <h1>고객 등록 페이지</h1>
+            
             <Search
                 sortBy={sortBy}
                 sortByChange={sort => setSortBy(sort)}
