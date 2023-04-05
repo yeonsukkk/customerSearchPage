@@ -80,6 +80,6 @@ react-portfolio3_search
             - "고객 리스트가 없습니다." 출력
         - 신규 고객 등록
           - 필수 항목을 적지 않을 때는 하단에 경고 메시지 출력 (등록x)
-            <img src="https://ys-react-search.s3.ap-northeast-2.amazonaws.com/git/warning.png" alt="경고메시지 이미지" width="300" />
+            <img src="https://ys-react-search.s3.ap-northeast-2.amazonaws.com/git/warning.png" alt="경고메시지 이미지" width="300" /><br />
           - 등록 완료시 모달창으로 작성된 내용 보여준 후 리스트업
             <img src="https://ys-react-search.s3.ap-northeast-2.amazonaws.com/git/modal.png" alt="모달창 이미지" width="300" />
