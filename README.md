@@ -78,6 +78,7 @@ react-portfolio3_search
             - 필터링을 걸쳐 검색한 내용에 일치하는 고객 정보 리스트업
           - 일치하는 고객 없을 경우
             - "고객 리스트가 없습니다." 출력
+        - 리스트에 마우스 호버 시, 삭제버튼 생성 -> 클릭 시 삭제
         - 신규 고객 등록
           - 필수 항목을 적지 않을 때는 하단에 경고 메시지 출력 (등록x)<br />
             <img src="https://ys-react-search.s3.ap-northeast-2.amazonaws.com/git/warning.png" alt="경고메시지 이미지" width="300" />
